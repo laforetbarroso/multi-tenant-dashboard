@@ -3,6 +3,7 @@ import type { Config } from 'ziggy-js';
 
 export interface Auth {
     user: User;
+    organization: Organization;
 }
 
 export interface BreadcrumbItem {
@@ -40,4 +41,9 @@ export interface User {
     created_at: string;
     updated_at: string;
     [key: string]: unknown; // This allows for additional properties...
+}
+
+export interface Organization {
+    id: number;
+    name: string;
 }
