@@ -1,7 +1,8 @@
 import { router } from '@inertiajs/react';
+import { Organization } from '@/types';
 
-export default function OrganizationSwitch({ organizations }) {
-    const handleSwitch = (id) => {
+export default function OrganizationSwitch({ organizations } : { organizations : Organization[] }) {
+    const handleSwitch = (id: number) => {
         router.post(route('organization.switch'), {
             organization_id: id,
         });
@@ -11,7 +12,7 @@ export default function OrganizationSwitch({ organizations }) {
         <div className="p-6 max-w-lg mx-auto">
             <h1 className="text-xl font-bold mb-4">Choose an Organization</h1>
             <ul className="space-y-3">
-                {organizations.map((org) => (
+                {organizations.map((org : Organization) => (
                     <li key={org.id}>
                         <button
                             onClick={() => handleSwitch(org.id)}

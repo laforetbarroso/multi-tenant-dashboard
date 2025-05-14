@@ -1,5 +1,6 @@
 import { LucideIcon } from 'lucide-react';
 import type { Config } from 'ziggy-js';
+import { ErrorBag, Errors, PageProps, VisitOptions } from '@inertiajs/core/types/types';
 
 export interface Auth {
     user: User;
@@ -46,4 +47,17 @@ export interface User {
 export interface Organization {
     id: number;
     name: string;
+}
+
+export interface Project {
+    id: number;
+    name: string;
+    description: string;
+}
+
+export interface TentantSharedData extends SharedData {
+    flash: {
+        success?: string;
+        error?: string;
+    };
 }
