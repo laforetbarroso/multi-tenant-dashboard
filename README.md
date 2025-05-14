@@ -89,4 +89,4 @@ You may copy, distribute, and modify the software as long as you track changes/d
 
 ## 👤 Author
 
-Built by [Your Name](https://github.com/your-username) – Software Engineer & Fullstack Developer
+Built by [Pedro Barroso](https://github.com/laforetbarroso)
