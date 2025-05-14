@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrganizationMemberController;
 use App\Http\Controllers\OrganizationSwitchController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
@@ -16,8 +17,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // All org-aware routes:
     Route::middleware('org.selected')->group(function () {
+
         Route::get('/dashboard', fn () => Inertia::render('dashboard'))->name('dashboard');
+
         Route::resource('projects', ProjectController::class);
+
+        Route::get('/members', [OrganizationMemberController::class, 'index'])->name('members.index');
+
     });
 });
 

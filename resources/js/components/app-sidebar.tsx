@@ -18,6 +18,11 @@ const mainNavItems: NavItem[] = [
         href: '/projects',
         icon: LayoutGrid,
     },
+    {
+        title: 'Members',
+        href: '/members',
+        icon: LayoutGrid,
+    },
 ];
 
 const footerNavItems: NavItem[] = [
